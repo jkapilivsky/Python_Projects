@@ -12,8 +12,9 @@ mmr_df = pd.read_pickle('Combined_MMR.p') #283,007 DLs
 #combined dataframe
 merged_df = pd.merge(mmr_df, web_visit_df, how='inner', on='VisitorGUID') #178.971
 
-#print(merged_df.head())
+
 #TODO: combine duplicate columns.. or drop them and rename the ones with _x and _y
+
 
 def product_conversion():
     product_list = []
@@ -32,4 +33,4 @@ def product_conversion():
     return df
 
 
-print(product_conversion())
+print(product_conversion().sort_values(by='DL count', ascending=False))
