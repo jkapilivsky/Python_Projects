@@ -1,5 +1,5 @@
 import omniture
-analytics = omniture.authenticate('jamie.kapilivsky:solarwinds', 'fea2ae7c0cc7ed980cfb1d69a6ac6fa8')
+analytics = omniture.authenticate('Secret', 'client_info')
 
 SWDCsuite = analytics.suites['solarwindsprod']
 
